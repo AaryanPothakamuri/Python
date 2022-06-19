@@ -1,0 +1,51 @@
+>>> os.mkdir("Documents/newFolder")
+>>> os.getcwd()
+'C:\\Users\\sudhi'
+>>> path = '/usr/local/bin/'
+>>> isExist = os.path.exists(path)
+>>> print(isExist)
+False
+>>> path = 'C:/Users/sudhi/3D Objects/Print 3D'
+>>> isExist = os.path.exists(path)
+>>> print(isExist)
+True
+>>> import os
+>>> path = 'C:/Users/sudhi/3D Objects/Print 3D/File.txt'
+>>> root_ext = os.path.splitext(path)
+>>>
+>>> print("root:",root_ext[0])
+root: C:/Users/sudhi/3D Objects/Print 3D/File
+>>> print("ext:",root_ext[1])
+ext: .txt
+>>> os.listdir()
+['-1.14-windows.xml', '.android', '.bashrc', '.bash_history', '.bash_profile', '.cache', '.config', '.eclipse', '.expo', '.gitconfig', '.jabba', '.Ld2VirtualBox', '.lmmsrc.xml', '.p2', '.thumbnails', '.tl', '.tooling', '.viminfo', '.vscode', '3D Objects', 'AppData', 'Application Data', 'banned-ips.json', 'banned-players.json', 'bukkit.yml', 'commands.yml', 'Contacts', 'Cookies', 'Desktop', 'Documents', 'Downloads', 'E', 'eclipse', 'eclipse-workspace', 'eula.txt', 'Favorites', 'FlightGear', 'FPS', 'help.yml', 'hmmmmm', 'IntelGraphicsProfiles', 'Links', 'Local Settings', 'MicrosoftEdgeBackups', 'Music', 'My Documents', 'MyFirstGame', 'NCH Software Suite', 'NetHood', 'nohup.out', 'notes pong game.md', 'NTUSER.DAT', 'ntuser.dat.LOG1', 'ntuser.dat.LOG2', 'NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf', 'NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms', 'NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms', 'ntuser.ini', 'OneDrive', 'opera autoupdate', 'ops.json', 'paper.yml', 'permissions.yml', 'Pictures', 'PrintHood', 'PycharmProjects', 'Recent', 'Roaming', 'Saved Games', 'Searches', 'SendTo', 'server.jar', 'server.properties', 'spigot.yml', 'Start Menu', 'Templates', 'usercache.json', 'version_history.json', 'Videos', 'wepif.yml', 'whitelist.json']
+>>>
+>>> import os
+>>> import shutil
+>>> path = 'C:/Users/sudhi/3D Objects/Print 3D'
+>>> print("path before copying file:")
+path before copying file:
+>>> print(os.listdir(path))
+['File.txt', 'T-Rex.3mf']
+>>> source = 'C:/Users/sudhi/3D Objects/Print 3D/File.txt'
+>>> destination = 'C:/Users/sudhi/3D Objects/Print 3D/File1.txt'
+>>> copy = shutil.copy(source,destination)
+>>>
+>>> print("path after copying file:")
+path after copying file:
+>>> print(os.listdir(path))
+['File.txt', 'File1.txt', 'T-Rex.3mf']
+>>> import os
+>>> import shutil
+>>> path =  'C:/Users/sudhi/3D Objects/Print 3D'
+>>> print(path)
+C:/Users/sudhi/3D Objects/Print 3D
+>>> source =  'C:/Users/sudhi/3D Objects/Print 3D/File1.txt'
+>>> destination = 'C:/Users/sudhi/3D Objects'
+>>> move = shutil.move(source,destination)
+>>>
+>>> print("after moving the file")
+after moving the file
+>>> print(os.listdir(path))
+['File.txt', 'T-Rex.3mf']
+>>>
